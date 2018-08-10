@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script>
+
+// var company = {
+//     name:'pang',
+//     age:3.
+//     sayHello:function(){
+//         console.log('hello')
+//     }
+// }
+// console.log(company.name)
+// console.log(compang['name'])
+// console.log.sayHello()
+
+// company.addr = 'where'
+// company['business'] = 'study'
+
+// for(var key in company){
+//     console.log(key)
+//     console.log(company[key])
+// }
+
+
+// var o = {
+//     p:function (x) { 
+//         return 2 * x;
+//     }
+// };
+
+// o.p(1)
+
+// var o = {
+//     p:'hello'
+// };
+
+// o.p
+// o['p']
+
+
+// var o = {
+//     0.7:'hello'
+// };
+
+// o['0.7']
+// o[0.7]
+
+
+
+var obj  = {
+    name: 'hello',
+    age:3,
+    friends:['hoho','haha','lala']
+}
+
+var obj2 = JSON.parse(JSON.stringify(obj))
+obj.age = 4
+console.log(obj2.age)
+
+
+
+</script>
+
+
+
+</head>
+<body>
+    
+
+
+
+</body>
+</html>

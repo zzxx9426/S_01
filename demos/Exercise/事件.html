@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <script type = "text/javascript">
+
+
+    // var btnClick = document.getElementById('btnClick');
+    // btnClick.onclick = function showMessage() {
+    //     alert(this.id);
+    // };
+    
+    
+// var btnClick = document.getElementById('btnClick');
+// btnClick.addEventListener('click',function(){
+//     alert(this.id);
+// },false);
+
+// btnClick.addEventListener('click',function(){
+//     alert('hello!');
+// },false);
+
+    
+// var btnClick = document.getElementById('btnClick');
+// var handler = function(){
+//     alert(this.id);
+// }
+
+// btnClick.addEventListener('click',handler,false);
+// btnClick.removeEventListener('click',handler,false);
+
+
+
+function $(selector){
+    return document.querySelector(selector)
+}
+
+var btn = $('#btn')
+btn.onclick = function(e){
+    console.log(e)
+}
+btn.addEventListener('click',function(evt){
+    console.log(this)
+    console.log(btn)
+    console.log(evt.target)
+})
+
+$('.container').addEventListener('click',function(e){
+    console.log('contianer click.. in 捕获阶段')
+}, true)
+$('.box').addEventListener('click', function(e){
+    console.log('box click.. in 捕获阶段')
+}, true)
+$('.target').addEventListener('click', function(e){
+    console.log('target click.. in 捕获阶段')
+}, true)
+
+$('.container').addEvenetListener('click', function(e){
+    console.log('contianer click.. in 冒泡阶段')
+}, false)
+$('.box').addEventListener('click', function(e){
+    console.log('box click.. in 冒泡阶段')
+}, false)
+$('.target').addEvenetListener('click',function(e){
+    console.log('taget click.. in 冒泡阶段')
+}, false)
+
+
+    </script>
+</head>
+<body>
+        <!-- <input id="btnClick"  type="button"  value="Click Here" /> -->
+
+        <style>
+                .container,
+                .box,
+                .target{
+                    border: 1px solid;
+                    padding:10px;
+                }
+                
+                </style>
+<button id="btn">click</button>
+
+<div class="container">
+    container
+    <div class="box">
+        box
+        <div class="target">
+            target
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

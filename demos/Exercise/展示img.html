@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+<ul class="ct">
+    <li data-img="https://github.com/zzxx9426/myPicture/blob/master/JSON.stringify.png?raw=true">鼠标放置查看图片1</li>
+    <li data-img="https://github.com/zzxx9426/myPicture/blob/master/addEventListener.png?raw=true">鼠标放置查看图片2</li>
+    <li data-img="https://github.com/zzxx9426/myPicture/blob/master/%E4%B8%8D%E6%98%AF%E4%BB%8E0%E5%BC%80%E5%A7%8B%E7%9A%84%E5%88%A0%E9%99%A4.png?raw=true">鼠标放置查看图片3</li>
+</ul>
+<div class="img-preview"></div>
+
+
+<script>
+
+// var ct = document.querySelector('.ct');
+//         preview = document.querySelector('.img-preview');
+
+//     ct.addEventListener('mouseover',function(e){
+//         var dataImg = e.target.getAttribute('data-img');
+//         preview.innerHTML ='<img src="'+ dataImg +'">'
+//     })
+
+
+
+
+var ct = document.querySelector('.ct');
+var imgpre = document.querySelector('.img-preview');
+
+ct.addEventListener('mouseover',function(e){
+    var dataimg = e.target.getAttribute('data-img');
+    imgpre.innerHTML = '<img src ="'+ dataimg +'">';
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<script>
+
+function shallowCopy(oldObj) {
+    var newOj = {};
+        for(var i in oldObj) {
+            if(oldObj.hasOwnProperty(i)) {
+                newObj[i] = oldObj[i];
+            }
+        }
+    return newObj;
+}
+
+
+
+function deepCopy(oldObj) {
+    var newObj = {};
+    for(var key in oldObj) {
+        if(typeof oldObj[key] === 'object') {
+            newObj[key] = deepCopy(oldObj[key]);
+        }else{
+            newObj[key] = oldCopy[key];
+        }
+    }
+    return newObj;
+}
+
+
+
+</script>
+</head>
+<body>
+    
+
+
+
+
+    
+</body>
+</html>

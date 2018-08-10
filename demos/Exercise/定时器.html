@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>setTime</title>
+    <script>
+//     var timerId = setTimeout(function | code, delay)
+
+//     function f(){
+//         console.log(2);
+//     }
+//     setTimeout(f,1000);
+    
+// setTimeout(function(){console.log(2)},1000);
+
+// var i = 1
+// var timer = setInterval(function(){
+//     console.log(i++);
+// },1000);
+
+
+// var id1 = setTimeout(f,1000);
+// var id2 = setInterval(f,1000);
+// clearTimeout(id1);
+// clearInterval(id2);
+
+
+// var i = 0;
+// for(var i = 0; i < 10; i++){
+//     setTimeout(function(){
+//         console.log(i)
+//     },1000)
+// }
+
+
+// var t = true;
+// setTimeout(function(){
+//     t = false;
+// },1000);
+
+// while(t){}
+// console.log('end')
+
+
+function f1(cb){
+    setTimeout(function(){
+        console.log('f1')
+        for(var i = 0;i < 10000;i++){
+
+        }
+        console.log('f1done')
+        
+        cb()
+    },0);
+}
+function f2(){
+    console.log('f2');
+}
+function f3(){
+    console.log('f3');
+}
+
+//函数节流
+var timer
+function hiDd(){
+    if(timer){
+        clearTimeout(timer)
+    }
+    timer = setTimeout(function(){
+        console.log('do something')
+    },300)
+}
+
+hiDd()
+hiDd()
+hiDd()
+function thorttle(fn, delay){
+    var timer = null
+    return function(){
+        clearTimeout(timer)
+        timer = setTimeou(function(){
+            fn(arguments)
+        }, delay)
+    }
+}
+
+function fn(){
+    console.log('hello')
+}
+
+var fn2 = throttle(fn, 1000)
+
+fn2()
+fn2()
+fn2()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

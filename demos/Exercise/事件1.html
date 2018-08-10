@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件1</title>
+<script>
+
+// document.querySelector('a').onclick=function(e){
+//     e.preventDefault()
+//     console.log(this.href)
+//     if(/baidu.com/.test(this.href)){
+//         location.href = this.href
+//     }
+// }
+
+// docunment.querySelector('form').addEventListener('submit',function(evt){
+//     evt.preventDefault()
+//     if(document.querySelector('input[name=username]').value === 'haha'){
+//         this.submit()
+//     }
+// })
+
+
+function $(selector){
+ return document.querySelector(selector)
+}
+function $$(selector){
+    return document.querySelectorAll(selector)
+}
+
+$('.container').onclick = function(e){
+    console.log(this)
+    console.log(e.target)
+    if(e.target.classList.contains('box')){
+        console.log(e.target.innerText)
+    }
+}
+
+var i = 4
+$('#add').onclick = function(){
+    var box = document.createElement('div')
+    box.classList.add('box')
+    box.innerText = 'box' + (i++)
+    $('.container').appendChild(box)
+}
+
+
+
+docunment.querySelector('#btn').onclick = function(e){
+    e.preventDefault();
+}
+
+
+var handler = function(e){
+    alert(e.type);
+    e.stopPropagation();
+}
+
+addEvent(document.body, 'click',function(){alert('Clicked body')});
+var btnClick = document.getElementById('btnClick');
+addEvent(btnClick,'click', handler);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</head>
+<body>
+    <!-- <a href="http://baidu.com">baidu</a> -->
+<!-- 
+<form action="/login">
+<input type="text" name="username">
+<input type="submit">
+ -->
+
+<!-- </form> -->
+
+
+<div class="container">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+</div>
+<button id="add">add</button>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

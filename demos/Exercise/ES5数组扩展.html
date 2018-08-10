@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script>
+
+// var a = [1, 2, 3, 4];
+// console.log(a.join(','));
+// console.log(a.join(' '));
+
+
+// var a = [1, 2, 3, 4];
+// console.log(a);
+// console.log(a.slice(1, 2));
+// console.log(a.slice(1,-1));
+// console.log(a.slice(3,2));
+// console.log(a);
+
+// var a = [5, 4, 3, 2, 1];
+// a.sort()
+// console.log(a)
+
+
+// var a = [7, 8, 9, 10, 11]
+// a.sort(function(v1,v2){
+//     return v1 - v2 
+// })
+// console.log(a)
+
+
+// var a = [7, 8, 9, 10, 11]
+// a.sort()
+// console.log(a)
+
+// var a = [7, 8, 9, 10, 11]
+// a.sort(function(v1,v2){
+//    return v1-v2
+// })
+// console.log(a)
+
+// var users = [
+//     {
+//         name:'aa'
+//         age: 21
+//     },
+//     {
+//         name:'baa'
+//         age: 19
+//     },
+//     {
+//         name:'cca'
+//         age: 23
+//     }
+// ]
+
+// var sortByAge = user.sort(function(v1,v2){
+//    return v1.age > v2.age
+// })
+
+// var sortByName = user.sort(function(v1,v2){
+//     return v1.name > v2.name 
+// })
+
+
+// var a = [];
+// var b = new Date();
+// console.log(Array.isArray(a));
+// console.log(Array.isArray(b));
+
+// var a = new Array(1, 2, 3, 4, 5, 6);
+// a.forEach(function(e,i,array){
+//    array[i] = e + 1;
+// });
+// console.log(a);
+
+
+// var a = [1, 2, 3, 4, 5, 6]
+// console.log(a.every(function(e, i, arr){
+//     return e < 5
+// }))
+
+// console.log(a.some(function(e, i ,arr){
+//     return e > 4
+// }))
+
+
+// var a = [1, 2, 3, 4, 5, 6]
+
+// console.log(a.map(function(e){
+//     return e * e
+// }))
+
+// console.log(a)
+
+// var a = [1, 2, 3, 4, 5, 6]
+// console.log(a.filter(function(e){
+//    return e % 2 == 0;
+// }))
+
+// console.log(a)
+
+
+// var a = [1, 2, 3, 4, 5, 6];
+// var b = a.reduce(function(v1,v2){return v1 + v2})
+// console.log(a)
+
+// var b = a.reduceRight(function(v1, v2){return v1 - v2},100)
+// console.log(b)
+
+var sum = reduce([1, 2, 3],function(memo, num){
+    return memo + num;
+},0)
+console.log(sum)
+
+
+function reduce(arr, iteratee, initValue){
+    var tmpArr = (initValue === undefined ? [] : [initValue]).concat(arr)
+    while(tmpArr.length > 1){
+        tmpArr.splice(0, 2, iteratee(tmpArr[0],tmpArr[1]))
+    }
+    return tmpArr[0]
+}
+
+var sum = reduce([3, 5], function(v1, v2){
+    return v1 * v2
+},4)
+
+console.log(sum)
+
+
+flatten([1, [2], [3, [[4]]]])
+
+var arr = [3, [2, -4,[5,7]], -3, ['aa',[[b]]]]
+var arr2 = flatten(arr)
+console.log(arr2)
+
+function flatten(arr){
+    return arr.reduce(function(initArr, currntArr){
+        return initArr.concat(Array.isArray(currentArr)?flatten(currentArr):currntArr)
+    },[])
+}
+
+function flatten2(arr){
+    var newArr = []
+    function _flat(arr){
+        arr.forEach(val=>{
+            if(Array.isArray(val)){
+                _flat(val)
+            }else{
+                newArr.push(val)
+            }
+        })
+    }
+    _flat(arr)
+    return newArr
+}
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+   
+</body>
+</html>
