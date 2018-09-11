@@ -47,4 +47,9 @@ Java提供了一套实现Collection接口的标准集合类。其中一些事具
 标准集合类汇总：  
 ![](https://github.com/zzxx9426/S_01/blob/master/myPicture/JAVA/%E6%A0%87%E5%87%86%E9%9B%86%E5%90%88%E6%B1%87%E6%80%BB.png?raw=true)  
 java.util类  
-![]()
+![](https://github.com/zzxx9426/S_01/blob/master/myPicture/JAVA/util%E5%8C%85%E4%B8%AD-%E7%B1%BB.png?raw=true)  
+
+### 集合算法 
+集合框架定义了几种算法，可用于集合映射。这些算法被定义为集合类的静态方法。  
+在尝试比较不兼容的类型时，一些方法能够抛出ClassCastException异常。当试图修改一个不可修改的集合时，抛出UnsupportedOperationException异常。  
+集合定义三个静态的变量：EMPTY_SET,EMPTY_lIST,EMPTY_MAP的。这些变量都不可改变。

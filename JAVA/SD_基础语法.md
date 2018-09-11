@@ -36,9 +36,49 @@ Java可以使用修饰符来修饰类中方法和属性。
 
 ## Java变量
 
-* 局部变量
-* 类变量（静态变量）
-* 成员变量（非静态变量）
+//声明的位置划分
+* 局部变量：方法或语句块内部定义的变量。  
+* 成员变量： 方法外部、类的内部定义的变量。  
+
+```
+ 方法体内部声明的变量（包括形参）称为局部变量：  
+ 方法体内部是指与方法对应的大括号内部
+
+ 在方法体外，类雷内声明的变量称为成员变量  
+```
+
+
+//所属的数据类型划分  
+![](https://github.com/zzxx9426/S_01/blob/master/myPicture/JAVA/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%92%E5%88%86.png?raw=true)  
+
+> Java中定义了4类8中基本数据类型。  
+* 逻辑型-- boolean    
+* 文本型-- char  
+* 整数型-- byte,short,int,long  
+* 浮点数型-- float，double  
+
+
+
+* 基本数据类型 变量
+```
+基本数据类型转换   
+boolean类型不可以转换为其他的数据类型。  
+整型，字符型，浮点型的数据在混合运算中相互转换，转换时遵循以下原则：  
+1. 容量晓得类型自动转换为容量大的数据类型：数据类型按容量大小排序为：  
+  1.1 byte,short,char->int->long->float->double  
+  1.2 byte,short,char之间不会相互转换，他们三者在计算时首先会转换为int类型  
+2. 容量大的数据类型转换为容量小的数据类型时，要加上强制转换符，但可能造成精度降低或溢出：使用时要格外注意。  
+3. 有多种类型的数据混合运算时，系统首先自动的将所有数据转换成容量最大的哪一种数据类型，然后再进行计算。  
+4. 实数常量（如：1.2）默认为double。  
+5. 整数常量（如：123）默认为int。  
+
+```
+* 引用数据类型 变量 
+
+从本质上来将，变量其实是内存里面的一小块区域，一个程序在运行的时候，实际上是位于内存里面，然后才开始运行。一个.exe文件存放在硬盘上无法运行的，在硬盘上看到的.exe文件无非就是一个文件而已，当我们双击这个.exe文件时，运行起来的时候实际上是整个.exe文件被放在了内存里面，然后操作系统找到main方法，也就是程序的入口，然后就开始执行了，执行的过程中，会不断地在内存里面分配一些区域，变量在内存里面就是一小块区域，变量有两个概念，一个是变量的名字，另一个是变量的值，即这一小块区域是有名字的，里面装着一个值，因此以后要想访问这小块区域里面的内容就可以根据这小块区域的名字来访问了。因此，变量的本质就是一小块内存区域。就变量来说，该内存里面分配多大的存储空间呢？不同的变量类型分配不同大小的存储空间，每一个变量都是属于特定的数据类型的，声明成不同的数据类型，他就在内存里面分配不同的存储空间。  
+变量的作用于：变量的作用域只在“{}”有效，出了这个“{}”就没有作用了。  
+
+
 
 ## Java数组
 
@@ -401,17 +441,17 @@ volatile修饰的成员变量在每次被线程访问时，都强制从共享内
   
 ### 位运算符
 Java定义了位运算符，应用于整数类型（int），长整型（long），短整型（short），字符型（char），和字节型（byte）等类型。  
-位运算符作用在所有的位上，并且按位运算。
-![](https://github.com/zzxx9426/S_01/blob/master/myPicture/other/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6.png?raw=true)  
-###逻辑运算符
-![](https://github.com/zzxx9426/S_01/blob/master/myPicture/other/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6.png?raw=true)  
+位运算符作用在所有的位上，并且按位运算。  
+![](https://github.com/zzxx9426/S_01/blob/master/myPicture/other/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6.png?raw=true)      
+###逻辑运算符  
+![](https://github.com/zzxx9426/S_01/blob/master/myPicture/other/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6.png?raw=true)   
 
-### 短路逻辑运算符
-当使用与逻辑运算符时，在两个操作数都为true时，结果才为true，但是当得到第一个操作为false时，其结果就必定是false，这时候就不会再判断第二个操作了。
-![](https://github.com/zzxx9426/S_01/blob/master/myPicture/other/%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6.png?raw=true)
-
-### 赋值运算符
+### 短路逻辑运算符  
+当使用与逻辑运算符时，在两个操作数都为true时，结果才为true，但是当得到第一个操作为false时，其结果就必定是false，这时候就不会再判断第二个操作了。  
 ![](https://github.com/zzxx9426/S_01/blob/master/myPicture/other/%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6.png?raw=true)  
+
+### 赋值运算符  
+![](https://github.com/zzxx9426/S_01/blob/master/myPicture/other/%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6.png?raw=true)    
 
 
 ### 条件运算符
@@ -422,7 +462,7 @@ variable x = (expression) ? value if true : valur if false
 (Object reference variable) instanceof (class/interface type)
 
 ### Java运算符优先级
-![](https://github.com/zzxx9426/S_01/blob/master/myPicture/other/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7%20.png?raw=true)
+![](https://github.com/zzxx9426/S_01/blob/master/myPicture/other/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7%20.png?raw=true)  
 
 
 
