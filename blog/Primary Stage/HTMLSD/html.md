@@ -112,9 +112,9 @@ nofollow：文件将不被检索，页面上的链接可以被查询。(不让ro
 
 4. Author (作者)
 说明：标注网页的作者或制作组
-用法：< meta name="author" content="mycodewind，mycodewind@qq.com">
+用法：< meta name="author" content="mycodewind，xxx@xx.com">
 注意：Content可以是：你或你的制作组的名字,或Email
-5. Copyright (版权)说明：标注版权用法：< meta name="copyright" content="本网站版权归CSDN所有">
+5. Copyright (版权)说明：标注版权用法：< meta name="copyright" content="本网站版权归xx所有">
 6. Generator (编辑器)说明：编辑器的说明用法：< meta name="generator" content="PCDATA|FrontPage|">注意：Content="你所用编辑器"
 7. Revisit-after (重访)说明：通知搜索引擎多少天访问一次用法：< meta name="revisit-after" content="7 days" >从IE9开始引入了固定网站功能，对用户来说这是一种只需在任务栏上单击图标即可直接访问网站的简单方式。固定网站还易于实现，仅需要非常少的代码。以下的元数据标签只在IE9+生效。如Windows Vista,Windows 7系统上。官方文档地址http://msdn.microsoft.com/zh-cn/library/ie/gg491732%28v=vs.85%29.aspx 。所有元素都是可选的。
 8.移动端viewport标签含义如下：width控制 viewport 的大小，可以指定的一个值或者特殊的值，如 device-width 为设备的宽度（单位为缩放为 100% 时的 CSS 的像素）。
@@ -123,13 +123,13 @@ target-densitydpi一个屏幕像素密度是由屏幕分辨率决定的，通常
 initial-scale初始缩放。即页面初始缩放程度。这是一个浮点值，是页面大小的一个乘数。例如，如果你设置初始缩放为“1.0”，那么，web页面在展现的时候就会以target density分辨率的1:1来展现。如果你设置为“2.0”，那么这个页面就会放大为2倍。
 maximum-scale最大缩放。即允许的最大缩放程度。这也是一个浮点值，用以指出页面大小与屏幕大小相比的最大乘数。例如，如果你将这个值设置为“2.0”，那么这个页面与target size相比，最多能放大2倍。
 user-scalable用户调整缩放。即用户是否能改变页面缩放程度。如果设置为yes则是允许用户对其进行改变，反之为no。默认值是yes。如果你将其设置为no，那么minimum-scale 和 
-maximum-scale都将被忽略，因为根本不可能缩放。所有的缩放值都必须在0.01–10的范围之内。例：(设置屏幕宽度为设备宽度，禁止用户手动调整缩放) < meta name="viewport" content="width=device-width,user-scalable=no" />(设置屏幕密度为高频，中频，低频自动缩放，禁止用户手动调整缩放)< meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>另外，[iOS](http://lib.csdn.net/base/ios) 7.1的Safari为meta标签新增minimal-ui属性，在网页加载时默认隐藏地址栏与导航栏。
+maximum-scale都将被忽略，因为根本不可能缩放。所有的缩放值都必须在0.01–10的范围之内。例：(设置屏幕宽度为设备宽度，禁止用户手动调整缩放) < meta name="viewport" content="width=device-width,user-scalable=no" />(设置屏幕密度为高频，中频，低频自动缩放，禁止用户手动调整缩放)< meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>另外，[iOS]( ) 7.1的Safari为meta标签新增minimal-ui属性，在网页加载时默认隐藏地址栏与导航栏。
 
-###浏览器乱码的原因是什么？如何解决
+### 浏览器乱码的原因是什么？如何解决
 你的网页没有设置meta charset编码造成的，导致浏览器不能识别你网页默认编码类型。   解决方法：在浏览器中找到转换编码的菜单。
 1.  IE9浏览器出现网页乱码，在需要转码的网页空白处右键鼠标，即可选择编码，
 2.  谷歌浏览器中浏览需要转码的网页时，点击工具-->编码即可。
-###常见的浏览器有哪些，什么内核
+### 常见的浏览器有哪些，什么内核
 常见的 内核基本是一下4种：
 
 #### Trident：
@@ -144,15 +144,15 @@ Trident IV（IE6）——修正了一部分box-model的错误以及增加了“�
 
 Trident V（IE7）——修正许多CSS排版处理上的错误以及增加对PNG格式alpha通道（半透明）的支持。（这就是IE6经常被诟病的对png图片支持不良的之处！）
 
-####Geckos：
+#### Geckos：
 
 Gecko是套开放源代码的、以C++编写的网页排版引擎。这软件原本是由网景通讯公司开发的，Netcape6开始采用该内核。后来的 Mozilla FireFox也采用了该内核，Geckos的特点是代码完全公开，因此，其可开发程度很高，全世界的程序员都可以为其编写代码，增加功能。Geckos 现在由Mozilla基金会维护。
 
-####Presto：
+#### Presto：
 
 Presto是一个由Opera Software开发的浏览器排版引擎，该内核在2003年的Opera7中首次被使用，该款引擎的特点就是渲染速度的优化达到了极致，也是目前公认网页浏览速度最快的浏览器内核。
 
-####Webkit：
+#### Webkit：
 
 苹果公司自己的内核，也是苹果的Safari浏览器使用的内核。 Webkit引擎包含WebCore排版引擎及JavaScriptCore解析引擎，均是从KDE的KHTML及KJS引擎衍生而来，它们都是自由软 件，在GPL条约下授权，同时支持BSD系统的开发。所以Webkit也是自由软件，同时开发源代码。在安全方面不受IE、Firefox的制约，所以 Safari浏览器在国内还是很安全的。
 
@@ -166,13 +166,13 @@ Presto是一个由Opera Software开发的浏览器排版引擎，该内核在200
 
 使用Webkit内核的浏览器：Safari、Chrome。
 
-###常见的标签及应用场景
+## 常见的标签及应用场景
 
 * < a> 用于超链接。< a href="">some text< /a>
-* <article> 用于一篇文章。<article>a self-contained article</article>
-* <aside> 用于页面的侧边栏。<aside>some content</aside>
-* < blockquote> 用于大段的引用内容。< blockquote>some big texts</blockquote>
-* <body> 页面上显示的所有内容都被包含在<body></body>里
+* < article> 用于一篇文章。< article>a self-contained article</ article>
+* < aside> 用于页面的侧边栏。< aside>some content</ aside>
+* < blockquote> 用于大段的引用内容。< blockquote>some big texts</ blockquote>
+* < body> 页面上显示的所有内容都被包含在< body></ body>里
 * < br> 用于显示一个换行
 * < button> 用于显示一个按钮
 * < code> 用于一包裹一段代码内容
@@ -223,3 +223,6 @@ Presto是一个由Opera Software开发的浏览器排版引擎，该内核在200
 * < tr> 用于标记表格里的一行
 * < ul> 用于制作一个无序列表
     
+***
+***
+[iframe](http://www.runoob.com/tags/tag-iframe.html)

@@ -43,3 +43,8 @@ public class Preson{
         this.name = name;  
     }  
 }  
+
+### 对象成员的封装   
+Java通过三个关键字来控制对象的成员的外部可见性：public、private、protected。  
+* public：该成员外部可见，即该成员为接口的一部分。  
+* private：该成员外部不可见，只能用于内部使用，无法从外部访问。  

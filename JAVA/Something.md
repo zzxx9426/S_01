@@ -37,3 +37,4 @@ String[] args,argt;
 第一句中args是字符串数组类型，而argt则就是字符串变量，在第二句中args与argt都是字符串数组类型。  
 String[] args声明一个String数组，名字叫args。  
 String args [] 声明一个叫args的数组，类型是String。  
+
