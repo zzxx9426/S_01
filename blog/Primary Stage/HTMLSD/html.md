@@ -53,7 +53,7 @@ HTML标签通常是英文词汇的全称（如块引用：blockquote）或缩略
  *  使用表格时，标题要用caption，表头用thead，主体部分用tbody包围，尾部用tfoot包围。表头和一般单元格要区分开，表头用th，单元格用td；
  * **表单域要用fieldset标签包起来，并用legend标签说明表单的用途；**    
  *         每个input标签对应的说明文本都需要使用label标签，并且通过为input设置id属性，在lable标签中设置for=someld来让说明文本和相对应的input关联起来。    
-  *   ~~[HTML5](http://www.html5jscss.com/html5-semantics-section.html)语义标签* 暂留*~~
+  *   ~~[HTML5](http://www.html5jscss.com/html5-semantics-section.html)语义标签 (暂留)~~
 * * *
 * * *
   ###  怎样理解内容与样式分离的原则
